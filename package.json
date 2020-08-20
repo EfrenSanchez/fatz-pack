@@ -1,7 +1,7 @@
 {
   "name": "fatz-pack",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Librería de web componentes para el sitio de fazt community",
   "main": "dist/index.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -19,11 +19,30 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "prepublish": "npm run build",
+    "publish": "npm publish --access=public"
   },
   "dependencies": {
-    "@stencil/core": "^1.17.3",
-    "@types/jest": "^26.0.10"
+    "@stencil/core": "^1.17.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/puppeteer": "2.0.1",
+    "jest": "26.0.1",
+    "jest-cli": "26.0.1",
+    "puppeteer": "2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EfrenSanchez/fatz-pack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EfrenSanchez/fatz-pack/issues"
+  },
+  "homepage": "https://github.com/EfrenSanchez/fatz-pack",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
